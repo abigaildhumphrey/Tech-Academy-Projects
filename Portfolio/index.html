@@ -7,18 +7,24 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Abigail Humphrey Development </title>
-		<link rel="stylesheet" type="text/css" href="Stylesheet/sample_Portfolio.css">
+		<link rel="stylesheet" type="text/css" href="Stylesheet/my_portfolio.css">
+		<script src="JavaScript/javascript.js"></script>
+		<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 	</head>
 
 <!-- Body -->
 <body class="Background"> 
+	
+		<script>document.body.className += ' fade-out';</script>
+		
+
 
 <!-- Navbar -->
 	<div class="Navbar">
 		<a class="active" href="#Home">Home</a> 
 		<a href="#About">About</a>
 		<a href="#GitHub">GitHub</a>
-		<a href="#Contact">Contact</a>
+		<a onclick=openForm() ondblclick="closeForm()">Contact</a> <!--for popup form on click-->
 	</div>
 
 <!-- Home -->
@@ -35,7 +41,7 @@
 
 <!-- Video text --> 
 	<div class="Video_Text"> 
-		<h1 style="color:white;">Development by Abigail</h1>
+		<h1 style="font-size:4vw; color:white;">Development by Abigail</h1>
 			<p> 
 				<strong>
 					<center>
@@ -50,6 +56,7 @@
 			</p> 
 	</div>
 
+	</script>
 <!-- About section -->
 	<div class="Row" id="About"> 
 		<div class="Column_2"> <!-- Left column -->
@@ -57,7 +64,7 @@
 		</div>
   
 		<div class="Column_1"> <!-- Right column -->
-			<h1>About</h2>
+			<h1 style= font-size:3vw;>About</h2>
 				<p>I am a full-stack developer with a passion for language and art. I live in Portland, Oregon, and enjoy traveling in my spare time. <br>
 				<br>I am a graduate of <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a>’s Software Developer Boot Camp, 
 				and am experienced in the following web and programming languages: <br> HTML, CSS, JavaScript, SQL, C# and more. 
@@ -68,7 +75,7 @@
 <!-- GitHub section -->
 	<div class="Row" id="GitHub">
 		<div class="Column_1"> <!-- Left column -->
-			<h1>GitHub</h1>
+			<h1 style= font-size:3vw;>GitHub</h1>
 				<p>Interested in my work? <br> <br> Feel free to contact me, or view my public coding projects at my GitHub profile here:<br>
 				<center><a href="https://github.com/abigaildhumphrey/" target="_blank">Abigail Humphrey's GitHub</a></center></p>
 				
@@ -80,24 +87,24 @@
 	</div>
 
 <!-- Contact section -->
-	<div class="Row" id="Contact"> 
-		<div class="Column_3"> <!-- Contact image, left column -->
-			<img src="Stylesheet/Images/contact test2.jpg" alt="Contact_Image">
-		</div>
-	
-		<div class="Column_1"> <!-- Contact form, right "column" -->
-			<h1>Contact</h2> 
-				<form action="" method="get"> <!-- This specifies where to send the form data and how; it is left blank -->
+	<div id="Contact">
+		<button onclick="openForm()" class="Pop_Up_Button"> Contact </button>
+			<div class="form-popup" id ="myForm"> 
+				<form action="https://LINK HERE WHEN YOU GET THE FORM SITE WORKING" method="POST" class="form-container">
+					<h1 style= font-size:3vw;>Contact</h2> 
 					<label>Name:</label>
-						<input type="text" placeholder="Please enter your name here">
+						<input type="text" placeholder="Please enter your name here" name="name" required>
 					<label>Email:</label>
-						<input type="text" id="Email" name="Email" placeholder="Please enter your email here">
+						<input type="text" id="Email" name="Email" placeholder="Please enter your email here" name = "email" required>
 					<label>Message:</label>
 						<input type="text" id="Message" name="Message" placeholder="Please write your message here">
 						<input type="submit" value="Submit">
+			
+			<button type="button" class="btn cancel" onclick="closeForm()">Close</button>
 				</form>
 		</div>
 	</div>
+
 	
 <!-- Footer section -->
 	<footer>
@@ -105,6 +112,13 @@
 			<center>&copy Prosper Consulting Inc.,  <a href="https://learncodinganywhere.com/">The Tech Academy</a></center><br>
 		</p>
 	</footer>
+
+			<script>
+		        $(function() {
+		            $('body').removeClass('fade-out');
+		        });
+		    </script>
+	
 
 		</body>
 
