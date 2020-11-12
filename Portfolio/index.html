@@ -58,10 +58,50 @@
 
 	</script>
 <!-- About section -->
-	<div class="Row" id="About"> 
-		<div class="Column_2"> <!-- Left column -->
-			<img src="Stylesheet/Images/computer desk.jpeg" alt="Laptop">
-		</div>
+<!-------------------------------START: Slide Show In Column 2-------------------------------------->
+
+
+<div class="Row" id="About"> 
+		<div class="Column_2"> <!----------- Left Column Start ---------------->
+
+			<div id="Slideshow">
+				<div id="Slideshow_Background"> 
+				  <div id="Slideshow_Container">
+					
+					<div class="mySlides fade">
+					  <div class="Slide_Number">1 / 3</div>
+						<img class="Slide_Show_Images" src="Stylesheet/Images/computer desk.jpeg" style="width:100%">
+						
+					</div>
+					
+					<div class="mySlides fade">
+					  <div class="Slide_Number">2 / 3</div>
+						<img class="Slide_Show_Images" src="Stylesheet/Images/computer img1.jpeg" style="width:100%">
+						 
+					</div>
+			
+					<div class="mySlides fade">
+					  <div class="Slide_Number">3 / 3</div>
+						<img class="Slide_Show_Images" src="Stylesheet/Images/contact test2.jpg" style="width:100%">
+		
+					</div>
+					<a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+					<a class="Next" onclick="plusSlides(1)">&#10095;</a>
+				  
+				</div>
+					<br>
+						<div style="text-align:center">
+						<span class="dot" onclick="currentSlide(1)"></span> 
+						<span class="dot" onclick="currentSlide(2)"></span> 
+						<span class="dot" onclick="currentSlide(3)"></span> 
+						</div>
+					</div>
+				</div>
+
+		</div>  <!------------------Left Column End ------------------------------->
+
+
+<!-------------------------------END: Slide Show In Column 2-------------------------------------->
   
 		<div class="Column_1"> <!-- Right column -->
 			<h1 style= font-size:3vw;>About</h2>
@@ -118,7 +158,8 @@
 		            $('body').removeClass('fade-out');
 		        });
 		    </script>
-	
+		
+		<script src="JavaScript/javascript.js"></script>
 
 		</body>
 
